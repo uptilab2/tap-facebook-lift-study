@@ -3,14 +3,13 @@ from setuptools import setup
 
 setup(
     name="tap-facebook-lift-study",
-    version="0.1.0",
-    description="Singer.io tap for extracting data",
+    version="1.0.0",
+    description="singer tap extracting facebook ads lift studies data",
     author="emile.caron@uptilab.com",
-    url="http://singer.io",
+    url="https://reeport.io",
     classifiers=["Programming Language :: Python :: 3 :: Only"],
     py_modules=["tap_facebook_lift_study"],
     install_requires=[
-        # NB: Pin these to a more specific version for tap reliability
         "singer-python",
         "facebook-business==9.0.2",
     ],
@@ -18,8 +17,9 @@ setup(
     [console_scripts]
     tap-facebook-lift-study=tap_facebook_lift_study:main
     """,
-    package_data = {
-        "schemas": ["schemas/*.json"]
+    packages=["tap_facebook_lift_study"],
+    package_data={
+        "schemas": ["tap_facebook_lift_study/schemas/*.json"]
     },
     include_package_data=True,
 )
