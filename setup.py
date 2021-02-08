@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(
-    name="",
+    name="tap-facebook-lift-study",
     version="0.1.0",
     description="Singer.io tap for extracting data",
     author="emile.caron@uptilab.com",
