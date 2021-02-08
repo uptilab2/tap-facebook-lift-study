@@ -162,6 +162,10 @@ def get_lift_results(client, studies, breakdowns):
                     'result_advancedConversions_informativeMultiCellBayesianConfidence': result.get('advancedConversions.informativeMultiCellBayesianConfidence', None),
                     'result_advancedConversions_bayesianCILower': result.get('advancedConversions.bayesianCILower', None),
                     'result_advancedConversions_bayesianCIUpper': result.get('advancedConversions.bayesianCIUpper', None),
+                    'result_age': result.get('age', None),
+                    'result_gender': result.get('gender', None),
+                    'result_cell_id': result.get('cell_id', None),
+                    'result_country': result.get('country', None),
                 }
 
                 yield {**study_data, **objective_data, **result_data}
