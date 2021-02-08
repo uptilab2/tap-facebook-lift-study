@@ -14,12 +14,12 @@ setup(
         "facebook-business==9.0.2",
     ],
     entry_points="""
-    [console_scripts]
-    tap-facebook-lift-study=tap_facebook_lift_study:main
+        [console_scripts]
+        tap-facebook-lift-study=tap_facebook_lift_study:main
     """,
     packages=["tap_facebook_lift_study"],
     package_data={
-        "schemas": ["tap_facebook_lift_study/schemas/*.json"]
+        "tap_facebook_lift_study": ["schemas/*.json"],
     },
     include_package_data=True,
 )
