@@ -49,6 +49,10 @@
         "result_advancedConversions_informativeSingleCellBayesianConfidence": {"type": ["null", "number"]},
         "result_advancedConversions_informativeMultiCellBayesianConfidence": {"type": ["null", "number"]},
         "result_advancedConversions_bayesianCILower": {"type": ["null", "number"]},
-        "result_advancedConversions_bayesianCIUpper": {"type": ["null", "number"]}
+        "result_advancedConversions_bayesianCIUpper": {"type": ["null", "number"]},
+        "age": {"type": ["null", "integer"]},
+        "gender": {"type": ["null", "integer"]},
+        "cell_id": {"type": ["null", "integer"]},
+        "country": {"type": ["null", "integer"]}
     }
 }
