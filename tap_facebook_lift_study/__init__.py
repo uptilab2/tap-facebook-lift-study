@@ -90,6 +90,13 @@ def sync(config, state, catalog):
         singer.write_records(stream.tap_stream_id, tap_data)
 
 
+def clean_datetime(val):
+    if not val:
+        return None
+    val = val[:19]
+    return val.replace('T', ' ')
+
+
 def get_lift_results(client, studies, breakdowns):
     # Load cells to add metadata to results
     for study in studies:
@@ -100,8 +107,8 @@ def get_lift_results(client, studies, breakdowns):
             'study_id': study.get('id'),
             'study_name': study.get('name'),
             'study_description': study.get('description'),
-            'study_start_time': study.get('start_time'),
-            'study_end_time': study.get('end_time'),
+            'study_start_time': clean_datetime(study.get('start_time')),
+            'study_end_time': clean_datetime(study.get('end_time')),
         }
 
         for objective in study.get_objectives(['id', 'name', 'type', 'is_primary']):
